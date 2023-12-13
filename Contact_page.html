@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - RCCOEM</title>
+    <title>Contact Us - GGU</title>
     <link rel="shortcut icon" href="image/favicon.ico" type="image/svg+xml">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -36,37 +36,14 @@
 			</div>
 			
 			<!-- Admission from -->
-			<div class="r_form">
-				<form method="post" onsubmit="sendmail(); reset(); return false;">
-					<div class="input_wrap">
-						<label for="yourname">Your Name</label>
-						<div class="input_item">
-							<i class="fa fa-user" id="icon"></i>
-							<input type="text" name="your name" class="input" id="yourname" placeholder="Enter the name" required>
-						</div>
-					</div>
-					<div class="input_wrap">
-						<label for="emailaddress">Email Address</label>
-						<div class="input_item">
-							<i class="fa fa-envelope" id="icon"></i>
-							<input type="email" name="email address" class="input" id="emailaddress" placeholder="Enter the Email ID" required>
-						</div>
-					</div>
-
-					<div class="input_wrap">
-						<label for="phone">Phone</label>
-						<div class="input_item">
-							<i class="fa fa-commenting" id="icon"></i>
-                            <textarea name="phone" class="mess" id="phone" placeholder="Write your message..." size="500"></textarea>
-						</div>
-					</div>
-					
-	
-					<input type="submit" class="button" value="Send Message">
-					<div ></div>
-					<input type="reset" class="clear_ad" value="Clear">
-					
-				</form>
+			<div class="contact-col">
+				<form id="myForm" action="http://localhost:3000/submit" method="post" >
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                    <input type="text" id="subject" placeholder="Enter your subject" required>
+                    <textarea id="message" rows="8" placeholder="Message" required></textarea>
+                    <button type="button" class="hero-btn blue-btn" onclick="submitForm()">Send Message</button>
+                </form>
 			</div>
         </div>
         </div>
@@ -95,5 +72,5 @@ function hidemenu(){
     navLinks.style.right="-200px";
 }
 </script>
-
+<script src="script.js"></script>
 </html>
